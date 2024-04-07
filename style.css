@@ -1,0 +1,82 @@
+html,
+body {
+    margin: 0;
+}
+
+p {
+    font-size: 32px;
+}
+
+.blocks {
+    width: 300px;
+    height: 100px;
+    visibility: hidden;
+}
+
+.blocks-left {
+    float: left;
+    background-color: #75da42;
+}
+
+.blocks-right {
+    float: right;
+    background-color: #cdda42;
+}
+
+.blocks-text {
+    float: left;
+    background-color: #e3bd9f;
+}
+
+.anim-move-left,
+.anim-move-right,
+.anim-appear {
+    animation-duration: 1s;
+    visibility: visible;
+}
+
+.anim-move-right {
+    animation-name: anim-move-right;
+}
+
+.anim-move-left {
+    animation-name: anim-move-left;
+}
+
+.anim-appear {
+    animation-name: anim-appear;
+}
+
+@keyframes anim-move-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes anim-move-right {
+    0% {
+        opacity: 0;
+        transform: translateX(170%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes anim-appear {
+    0% {
+        opacity: 0;/
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
